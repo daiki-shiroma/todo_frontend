@@ -54,7 +54,8 @@ function TodoList() {
 
   const getTodos = () => {
     return axios
-      .get("http://localhost:3000/todos")
+      // .get("http://localhost:3000/todos")
+      .get("https://todo6.onrender.com/todos")
       .then((res) => {
         if (res !== ''){
           setTodos(res.data);
@@ -65,14 +66,16 @@ function TodoList() {
 
   const toggleComplete = async (id, index) => {
     const complete = todos[index].complete;
-    await axios.put(`http://localhost:3000/todos/${id}`, {
+    // await axios.put(`http://localhost:3000/todos/${id}`, {
+       await axios.put(`https://todo6.onrender.com/todos/${id}`, {
       complete: !complete,
     });
     getTodos();
   };
 
   const editTaskName = async (e,id) => {
-    await axios.put(`http://localhost:3000/todos/${id}`, {
+    // await axios.put(`http://localhost:3000/todos/${id}`, {
+       await axios.put(`https://todo6.onrender.com/todos/${id}`, {
       name: todoName
     });
     getTodos();
@@ -83,11 +86,13 @@ function TodoList() {
 
     const complete = todos[index].complete;
 
-    await axios.put(`http://localhost:3000/todos/${todoId}`, {
+    //await axios.put(`http://localhost:3000/todos/${todoId}`, {
+      await axios.put(`https://todo6.onrender.com/todos${todoId}`, {
       complete: !complete
     });
 
-    axios.delete(`http://localhost:3000/todos/${todoId}`)
+    //axios.delete(`http://localhost:3000/todos/${todoId}`)
+    axios.delete(`https://todo6.onrender.com/todos${todoId}`)
       .then(() => 
       getTodos()
       )
