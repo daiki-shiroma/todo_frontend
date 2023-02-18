@@ -87,12 +87,12 @@ function TodoList() {
     const complete = todos[index].complete;
 
     //await axios.put(`http://localhost:3000/todos/${todoId}`, {
-      await axios.put(`https://todo6.onrender.com/todos${todoId}`, {
+      await axios.put(`https://todo6.onrender.com/todos/${todoId}`, {
       complete: !complete
     });
 
     //axios.delete(`http://localhost:3000/todos/${todoId}`)
-    axios.delete(`https://todo6.onrender.com/todos${todoId}`)
+    axios.delete(`https://todo6.onrender.com/todos/${todoId}`)
       .then(() => 
       getTodos()
       )

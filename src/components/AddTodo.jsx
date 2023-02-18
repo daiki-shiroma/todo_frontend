@@ -17,7 +17,7 @@ function AddTodo() {
   const getTodos = () => {
     return axios
      // .get("http://localhost:3000/todos")
-     .get("https://todo6.onrender.com")
+     .get("https://todo6.onrender.com/todos")
       .then((res) => {
         if (res !== ''){
           setTodos(res.data);
