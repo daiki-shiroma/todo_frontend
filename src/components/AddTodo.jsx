@@ -17,7 +17,7 @@ function AddTodo() {
   const getTodos = () => {
     return axios
      // .get("http://localhost:3000/todos")
-     .get("https://todo6.onrender.com/todos")
+     .get("https://todo-backend-n0y1.onrender.com/todos")
       .then((res) => {
         if (res !== ''){
           setTodos(res.data);
@@ -31,7 +31,7 @@ function AddTodo() {
     if (todoName!==''){
      axios
      //.post("http://localhost:3000/todos", {
-      .post("https://todo6.onrender.com/todos", {
+      .post("https://todo-backend-n0y1.onrender.com/todos", {
        name: todoName,
        complete: false,
      })
@@ -48,7 +48,7 @@ function AddTodo() {
 
  const ClearDoneTask=()=>{
     // axios.delete(`http://localhost:3000/todos/destroy_doneTask`)
-     axios.delete(`https://todo6.onrender.com/todos/destroy_doneTask`)
+     axios.delete(`https://todo-backend-n0y1.onrender.com/todos/destroy_doneTask`)
      .then(()=> {
       
      })
@@ -62,7 +62,7 @@ const deleteAllTodo=()=>{
    let res=window.confirm("TODOリストを全て削除しますか？");
     if (res) {
       //axios.delete(`http://localhost:3000/todos/destroy_all`)
-      axios.delete(`https://todo6.onrender.com/todos/destroy_all`)
+      axios.delete(`https://todo-backend-n0y1.onrender.com/todos/destroy_all`)
       .then(()=> {
         setTodos([])
       })
