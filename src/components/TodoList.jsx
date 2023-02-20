@@ -55,7 +55,7 @@ function TodoList() {
   const getTodos = () => {
     return axios
       // .get("http://localhost:3000/todos")
-      .get("https://todo-backend-n0y1.onrender.com/todos")
+      .get("https://wispy-wind-1056.fly.dev/todos")
       .then((res) => {
         if (res !== ''){
           setTodos(res.data);
@@ -67,7 +67,7 @@ function TodoList() {
   const toggleComplete = async (id, index) => {
     const complete = todos[index].complete;
     // await axios.put(`http://localhost:3000/todos/${id}`, {
-       await axios.put(`https://todo-backend-n0y1.onrender.com/todos/${id}`, {
+       await axios.put(`https://wispy-wind-1056.fly.dev/todos/${id}`, {
       complete: !complete,
     });
     getTodos();
@@ -75,7 +75,7 @@ function TodoList() {
 
   const editTaskName = async (e,id) => {
     // await axios.put(`http://localhost:3000/todos/${id}`, {
-       await axios.put(`https://todo-backend-n0y1.onrender.com/todos/${id}`, {
+       await axios.put(`https://wispy-wind-1056.fly.dev/todos/${id}`, {
       name: todoName
     });
     getTodos();
@@ -87,12 +87,12 @@ function TodoList() {
     const complete = todos[index].complete;
 
     //await axios.put(`http://localhost:3000/todos/${todoId}`, {
-      await axios.put(`https://todo-backend-n0y1.onrender.com/todos/${todoId}`, {
+      await axios.put(`https://wispy-wind-1056.fly.dev/todos/${todoId}`, {
       complete: !complete
     });
 
     //axios.delete(`http://localhost:3000/todos/${todoId}`)
-    axios.delete(`https://todo-backend-n0y1.onrender.com/todos/${todoId}`)
+    axios.delete(`https://wispy-wind-1056.fly.dev/todos/${todoId}`)
       .then(() => 
       getTodos()
       )
