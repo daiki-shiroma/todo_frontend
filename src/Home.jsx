@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import styled from 'styled-components'
 import AddTodo from './components/AddTodo'
 import TodoList from './components/TodoList'
@@ -10,7 +9,7 @@ const Wrapper = styled.div`
   margin: 20px auto;
 `
 
-const Home = () => {
+function Home(){
   return (
     <>
     <HeaderMenu/>

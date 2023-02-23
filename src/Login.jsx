@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Login = () => {
+function Login(){
   return (
     <>
       <h1>ログインページ</h1>

@@ -16,8 +16,8 @@ function AddTodo() {
 
   const getTodos = () => {
     return axios
-     // .get("http://localhost:3000/todos")
-     .get("https://wispy-wind-1056.fly.dev/todos")
+     .get("http://localhost:3000/todos")
+    //  .get("https://wispy-wind-1056.fly.dev/todos")
       .then((res) => {
         if (res !== ''){
           setTodos(res.data);
@@ -30,8 +30,8 @@ function AddTodo() {
   
     if (todoName!==''){
      axios
-     //.post("http://localhost:3000/todos", {
-      .post("https://wispy-wind-1056.fly.dev/todos", {
+     .post("http://localhost:3000/todos", {
+      // .post("https://wispy-wind-1056.fly.dev/todos", {
        name: todoName,
        complete: false,
      })
@@ -47,8 +47,8 @@ function AddTodo() {
  };
 
  const ClearDoneTask=()=>{
-    // axios.delete(`http://localhost:3000/todos/destroy_doneTask`)
-     axios.delete(`https://wispy-wind-1056.fly.dev/todos/destroy_doneTask`)
+    axios.delete(`http://localhost:3000/todos/destroy_doneTask`)
+    //  axios.delete(`https://wispy-wind-1056.fly.dev/todos/destroy_doneTask`)
      .then(()=> {
       
      })
@@ -61,8 +61,8 @@ function AddTodo() {
 const deleteAllTodo=()=>{
    let res=window.confirm("TODOリストを全て削除しますか？");
     if (res) {
-      //axios.delete(`http://localhost:3000/todos/destroy_all`)
-      axios.delete(`https://wispy-wind-1056.fly.dev/todos/destroy_all`)
+      axios.delete(`http://localhost:3000/todos/destroy_all`)
+      // axios.delete(`https://wispy-wind-1056.fly.dev/todos/destroy_all`)
       .then(()=> {
         setTodos([])
       })

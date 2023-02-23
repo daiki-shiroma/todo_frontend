@@ -2,6 +2,7 @@ import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
 import  Home  from "./Home";
 import  Register  from "./Register";
 import  Login from "./Login";
+import  FailedLogin from "./FailedLogin";
 import NotFound from "./NotFound";
 import './css/App.css';
 import styled from 'styled-components'
@@ -25,6 +26,7 @@ function App() {
         <Route path={`/`} element={<Home />} />
         <Route path="/Register" element={<Register />} />
         <Route path="/Login" element={<Login />} />
+        <Route path="/Fail_login" element={<FailedLogin />} />
         <Route path={`/*/`} element={<NotFound />} />
       </Routes>
     </BrowserRouter>
