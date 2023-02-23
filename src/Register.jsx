@@ -59,18 +59,13 @@ const Button_div = styled.div`
         password: userPassword,
         password_confirmation: userPasswordComfirm
      })
-     .then(() => {
-      // setUserName("");
-      // setUserNickName("");
-      // setUserEmail("");
-      // setUserPassword("");
-      // setUserPasswordComfirm("");
-      // setPasswordRequired(false);
-      // window.location.href = "https://google.com";
-      navigate('/');
+     .then((e) => {
+      console.log(e)
+      navigate("/LoginSuccess");
      })
 
      .catch((error) => {
+      console.log(error)
       navigate("/Fail_login");
     });
 
@@ -121,7 +116,7 @@ const Button_div = styled.div`
         onVisibilityChange={toggle}
         withAsterisk
         value={userPassword}
-        minlength="6"
+        minLength="6"
         onChange={(e) => setUserPassword(e.target.value)}
         onKeyUp={(e) => countPassword(e.target.value)}
         error={passwordRequired ? false:"Password must input at least 6 characters"}
@@ -134,7 +129,7 @@ const Button_div = styled.div`
         onVisibilityChange={toggle}
         withAsterisk
         value={userPasswordComfirm}
-        minlength="6"
+        minLength="6"
         onChange={(e) => setUserPasswordComfirm(e.target.value)}
         onKeyUp={(e) => checkPassword(e.target.value)}
         error={checkPasswordRequired ? false:"Password isn't match!!"}

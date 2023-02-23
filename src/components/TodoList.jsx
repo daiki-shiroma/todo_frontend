@@ -85,7 +85,6 @@ function TodoList() {
   const deleteTodo = async(todoId,index) => {
 
     const complete = todos[index].complete;
-
     await axios.put(`http://localhost:3000/todos/${todoId}`, {
       // await axios.put(`https://wispy-wind-1056.fly.dev/todos/${todoId}`, {
       complete: !complete
