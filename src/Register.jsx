@@ -59,8 +59,8 @@ const Button_div = styled.div`
         password: userPassword,
         password_confirmation: userPasswordComfirm
      })
-     .then((e) => {
-      console.log(e)
+     .then(() => {
+      console.log("seccess")
       navigate("/LoginSuccess");
      })
 
@@ -146,6 +146,7 @@ const Button_div = styled.div`
         </Button>
       </Button_div>
     </Wrapper>
+      
       <div>
         ログインは<Link to={`/login/`}>こちら</Link>
       </div>
